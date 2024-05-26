@@ -15,6 +15,7 @@ body {
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   width: 400px;
+  max-width: 90%;
   text-align: center;
 }
 
@@ -25,6 +26,7 @@ h1 {
 
 input[type="file"] {
   margin: 10px 0;
+  width: 100%;
 }
 
 button {
@@ -35,6 +37,7 @@ button {
   border-radius: 4px;
   cursor: pointer;
   margin-top: 10px;
+  width: 100%;
 }
 
 button:disabled {
