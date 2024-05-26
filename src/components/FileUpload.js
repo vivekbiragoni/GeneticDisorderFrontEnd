@@ -1,14 +1,17 @@
-// src/components/FileUpload.js
 import React, { useState } from "react";
 import axios from "axios";
 
 const FileUpload = ({ setResults }) => {
   const [file, setFile] = useState(null);
+  const [imageUrl, setImageUrl] = useState(null); // State to store the uploaded image URL
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
   const handleFileChange = (e) => {
-    setFile(e.target.files[0]);
+    const selectedFile = e.target.files[0];
+    setFile(selectedFile);
+    const objectUrl = URL.createObjectURL(selectedFile); // Create object URL for displaying the image
+    setImageUrl(objectUrl); // Set the image URL to be displayed
   };
 
   const handleUpload = async () => {
@@ -45,6 +48,8 @@ const FileUpload = ({ setResults }) => {
         {loading ? "Uploading..." : "Upload"}
       </button>
       {error && <p className="error">{error}</p>}
+      {imageUrl && <img src={imageUrl} alt="Uploaded" />}{" "}
+      {/* Render the uploaded image */}
     </div>
   );
 };
