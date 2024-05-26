@@ -80,6 +80,47 @@ button:hover:not(:disabled) {
   color: #007bff;
 }
 
+/* Add this CSS to your existing styles.css file or component */
+
+.file-upload {
+  margin-bottom: 20px;
+}
+
+.file-upload input[type="file"] {
+  margin-bottom: 10px;
+}
+
+.file-upload button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.file-upload button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.file-upload button:hover:not(:disabled) {
+  background-color: #0056b3;
+}
+
+.file-upload .error {
+  color: red;
+  margin-top: 10px;
+}
+
+.file-upload img {
+  max-width: 100%; /* Ensure the image does not exceed the container width */
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Ensure the image is displayed as a block element */
+  margin-top: 10px; /* Add margin for spacing */
+}
+
 @media (max-width: 600px) {
   .container {
     padding: 10px;
