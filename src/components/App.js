@@ -1,9 +1,9 @@
-// import ".public/styles.css";
-
 // src/App.js
-import React, { useState } from 'react';
-import FileUpload from './FileUpload';
-import Results from './Result';
+
+import React, { useState } from "react";
+import FileUpload from "./FileUpload";
+import Results from "./Result";
+
 const App = () => {
   const [results, setResults] = useState(null);
 
@@ -17,4 +17,3 @@ const App = () => {
 };
 
 export default App;
-
